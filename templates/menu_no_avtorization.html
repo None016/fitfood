@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="index" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="..\static\menu.css">
+		<title>Mиню</title>
+	</head>
+	<body id="docc">
+		<header>
+			<img class="logo" src="..\static\Logo.png">
+			<h2 class="fitfood">FitFood</h2>
+			<div class="menu">
+				<a href="\">Главная</a>
+				<a href="\menu">Меню</a>
+				<a href="\cor">Корзина</a>
+				<a href="\conta">Контакты</a>
+				<a href="\reg">Вход</a>
+			</div>
+		</header>
+		<main>
+
+			<article>
+				{% for i in tov %}
+
+				<div class="product">
+					<div class="for_img">
+						<img src="..\static\img\{{i.img}}" height="280" width="260" style="object-fit: cover;" alt="">
+					</div>
+					<h3 class="prais">{{i.tovar}}</h3>
+					<h2 class="prais">Цена: {{i.prise}} руб</h2>
+					<div class="footer">
+						<button class="add" onclick="dobav()">Добавить</button>
+						<button class="add" onclick="open1('post{{i.id}}', 'post2{{i.id * -1 - 1}}')">Подробнее</button>
+					</div>		
+				</div>
+
+				<div class="scro" id = 'post{{i.id}}'>
+					<div class = 'pop-up' id = 'post2{{i.id * -1 - 1}}'>
+						<button class="clous" onclick="clous1('post{{i.id}}', 'post2{{i.id * -1 - 1}}')"><img src="..\static\cros.png" alt=""></button>
+						<div class="img_pop-up">
+							<img src="..\static\img\{{i.img2}}" height="100%" width="700px" style="object-fit: cover; border-radius: 10px 10px 0px 0px;" alt="">
+						</div>
+						<h2>{{i.tovar}}</h2>
+						<h3>Цена: {{i.prise}} руб</h3>
+						<h3>Белки: {{i.bel}}</h3>
+						<h3>Жиры: {{i.zir}}</h3>
+						<h3>Углеводы: {{i.colors}}</h3>
+						<h3>Каллории: {{i.colors}}</h3>
+						<p>
+							Описание: {{i.opis}}
+						</p>
+						<button onclick="dobav()" class="add boton">Добавить</button>
+					</div>
+				</div>
+				{%endfor%}
+			</article>
+
+			<div class="pop_up_2" id="pop">
+				<h3>чтобы добавить товар в корзину войдите в акаунт</h3>
+				<a href="/reg">Вход</a>
+				<button onclick="ubr()" class="add boton">Закрыть</button>
+			</div>
+		
+		<script src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous"></script>
+		<script src = "..\static\menu.js" type="text/javascript"></script>
+	</main>
+	</body>
+</html>

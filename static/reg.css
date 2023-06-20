@@ -1,0 +1,161 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+body{
+    background-color: #dadada;
+}
+
+header{
+	background-color: #ffffff;
+	height: 80px;
+}
+
+.logo{
+	height: 60px;
+	float: left;
+	padding: 10px;
+}
+
+.img_menu{
+	height: 60px;
+	margin: 0px;
+}
+
+.menu{
+	font-size: 20px;
+	margin: 30px ;
+	float: right;
+	font-family: Calibri;
+}
+
+.menu a{
+	margin: 0px 15px;
+	text-decoration: none;
+	color: #000;
+    font-family: Calibri;
+    font-size: 20px;
+}
+
+.fitfood{
+	float: left;
+	font-size: 50px;
+	font-family: Calibri;
+	margin: 15px;
+}
+
+article{
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 10px;
+    border-radius: 10px;
+    height: 90%;
+    width: 600px;
+    text-align: center;
+}
+
+.forma{
+    width: 100%;
+    margin: 50px 0px;
+    
+}
+
+.forma input{
+    height: 30px;
+    width: 80%;
+    border: 1px solid #0c8603;
+    padding: 0px 10px;
+    margin: 5px 25px;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.forma h3{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 10px 0px;
+}
+
+.vhod{
+    width: 90%;
+    height: 40px;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: lighter;
+    background-color: #0c8603;
+    margin: 5% 15px 15px 15px;
+    border: none;
+}
+
+a{
+    font-size: 16px;
+    font-family: Arial;
+    color: #000;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.boto{
+    margin: 20px 0px;
+}
+
+h2{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: lighter;
+    margin: 20px 0px;
+}
+
+.vhod:hover{
+    background-color: #ffffff;
+    animation: baton 0.5s;
+    animation-timing-function: cubic;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #0c8603;
+}
+
+.menu a:hover{
+	color: #0c8603;
+	animation: line 0.5s;
+	animation-timing-function: cubic;
+    text-decoration: none;
+	
+}
+
+.forma input:focus{
+    outline: 0;
+    
+}
+
+@keyframes line {
+	0%{
+		color: #000;
+	}
+
+	100%{
+		color: #0c8603;
+		
+	}
+}
+
+@keyframes baton {
+    0%{
+        background-color: #0c8603;
+    }
+
+    100%{
+        background-color: #ffffff;    
+    }
+    
+}
+
+

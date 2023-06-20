@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\static\reg.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header> <img class="logo" src="..\static\Logo.png">
+        <h2 class="fitfood">FitFood</h2>
+        <div class="menu"> <a href="\">Главная</a>
+            <a href="\menu">Меню</a>
+            <a href="\cor">Корзина</a>
+            <a href="\conta">Контакты</a>
+            <a href="\reg">Вход</a>
+        </div>
+    </header>
+    <article>
+        <h2>Регистрация</h2>
+        <form id="form" class="forma" action="/reg_reg" method="post">
+            <h3>*Имя</h3> <input type="text" name="nic">
+            <h3>*Номер телефона</h3> <input type="tel" name="namber">
+            <h3>Адрес</h3> <input type="text" name="adres">
+            <h3>*Пароль</h3> <input type="password" name="pas1">
+            <h3>*Пароль повтор</h3> <input type="password" name="pas2"> </form> <button onclick="submit()" class="vhod">Вход</button>
+        <div class="boto"> <a href="#">Регистрация через Telegram</a> <a href="\reg">Вход</a> </div>
+    </article>
+    <script src="..\static\reg.js"></script>
+</body>
+
+</html>

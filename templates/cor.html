@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\static\cor.css">
+    <title>Корзина</title>
+</head>
+<body id = 'docc'>
+    <header>
+        <img class="logo" src="..\static\Logo.png">
+        <h2 class="fitfood">FitFood</h2>
+        <div class="menu">
+            <a href="\">Главная</a>
+            <a href="\menu">Меню</a>
+            <a href="\cor">Корзина</a>
+            <a href="\conta">Контакты</a>
+            <a href="\reg">{{vh}}</a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <form id="form" action="/cor" method="post">
+            {% for i in tov %}
+            <div class = "tovar">
+                <div class="for_img">
+                    <img src="..\static\img\{{i[0].img}}" height="110" width="110" style="object-fit: cover;" alt="">
+                </div>
+                <div class="text_tovar">
+                    <h2>{{i[0].tovar}}</h2>
+                    <h3>{{i[0].prise}}</h3>
+                    <button type="button" class="pod" onclick="open1('post{{i[0].id}}', 'post2{{i[0].id * -1 - 1}}')">Подробнее</button>
+                </div>                
+                <button class="ydl" type="button" onclick="dobb('/cor/{{i[0].id}}')">Удалить</button>
+
+                    <div class="number">
+                        <h4 class="col_text">Количество</h4>
+                        <button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+                        <input type="number" name="asd{{i[0].id}}" min="1" value="{{i[1]}}" readonly>
+                        <button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+                    </div>
+
+            </div>
+            <div class="scro" id = 'post{{i[0].id}}'>
+                <div class = 'pop-up' id = 'post2{{i[0].id * -1 - 1}}'>
+                    <button type="button" class="clous" onclick="clous1('post{{i[0].id}}', 'post2{{i[0].id * -1 - 1}}')"><img src="..\static\cros.png" alt=""></button>
+                    <div class="img_pop-up">
+                        <img src="..\static\img\{{i[0].img2}}" height="100%" width="700" style="object-fit: cover; border-radius: 10px 10px 0px 0px;" alt="">
+                    </div>
+                    <h2>{{i[0].tovar}}</h2>
+                    <h3>Цена:{{i[0].prise}}</h3>
+                    <h3>Белки:{{i[0].bel}}</h3>
+                    <h3>Жиры:{{i[0].zir}}</h3>
+                    <h3>Угливоды:{{i[0].ygl}}</h3>
+                    <h3>Коллории:{{i[0].colors}}</h3>
+                    <p>Описание:{{i[0].opis}}
+                        ID товара:{{i[0].id}}
+                    </p>
+                    <button class="add boton" onclick="dobb('/cor/{{i[0].id}}')">удалить</button>
+                </div>
+            </div>
+            {% endfor %}
+            </form>
+        </article>
+        <div class="chek">
+            <h1>Чек</h1>
+            {% for i in tov %}
+            <div>
+                <h3>{{i[0].tovar}}</h3>
+                <h4>Цена:{{i[0].prise}}</h4>
+            </div>
+            {% endfor %}
+            <button class="add" onclick="order()">Заказать</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script src = "..\static\cor.js"></script>
+    
+</body>
+</html>

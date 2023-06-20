@@ -1,0 +1,141 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+body{
+	background-color: #dadada;
+}
+
+header{
+	background-color: #ffffff;
+	height: 80px;
+}
+
+.logo{
+	height: 60px;
+	float: left;
+	padding: 10px;
+}
+
+.img_menu{
+	height: 60px;
+	margin: 0px;
+}
+
+.menu{
+	font-size: 20px;
+	margin: 30px ;
+	float: right;
+	font-family: Calibri;
+}
+
+.menu a{
+	margin: 0px 15px;
+	text-decoration: none;
+	color: #000;
+}
+
+.fitfood{
+	float: left;
+	font-size: 50px;
+	font-family: Calibri;
+	margin: 15px;
+}
+
+h1, h2, h3{
+    font-family: Arial;
+    text-align: center;
+    margin: 20px;
+}
+
+h1{
+    font-size: 56px;
+    margin: 20px auto;
+    width: 300px;
+}
+
+.div_call h2{
+    font-size: 28px;
+    width: 300px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.div_call h3{
+    font-size: 26px;
+    width: 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.div_call{
+    margin: 10px 20px;
+    width: 300px;
+}
+
+.img1{
+    margin:30px auto;
+    height: 100px;
+}
+
+.call{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu a:hover{
+	color: #0c8603;
+	animation: line 0.5s;
+	animation-timing-function:cubic;
+	
+}
+
+main{
+    display: flex;
+    flex-direction: column
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+footer h3{
+    font-size: 28px;
+}
+
+.iimg{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.ref_img img{
+    height: 80px;
+}
+
+.ref_img{
+    margin: 20px 10px;
+}
+
+
+@keyframes line {
+	0%{
+		color: #000;
+	}
+
+	100%{
+		color: #0c8603;
+		
+	}
+
+
+}

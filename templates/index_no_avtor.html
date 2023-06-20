@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="..\static\index.css">
+</head>
+<body id="docc">
+    <header>
+        <img class="logo" src="..\static\Logo.png">
+			<h2 class="fitfood">FitFood</h2>
+			<div class="menu">
+				<a href="\">Главная</a>
+				<a href="\menu">Меню</a>
+				<a href="\cor">Корзина</a>
+				<a href="\conta">Контакты</a>
+				<a href="\reg">Вход</a>
+    </header>
+
+    <main>
+        <article>
+            <img src="..\static\Logo.png">
+            <h1>FitFood</h1>
+            <h2>С FitFood питаешся - здоровьем обогащаешся</h2>
+        </article>
+    </main>
+
+    {% set count = namespace(value=-1) %}
+    {%for j in range(d)%}
+
+    <div class="for_text">
+        <h3>{{tov[count.value + 1][1]}}</h3>
+    </div>
+
+    
+
+    <aside>
+        {% for i in range(3) %}
+
+            {% set count.value = count.value + 1 %}
+        <div class = "content">
+            <div class="for_img">
+                <img src="..\static\img\{{tov[count.value][0][7]}}" height="280" width="260" style="object-fit: cover;" alt="">
+            </div>
+            <h3 class="prais">{{tov[count.value][0][1]}}</h3>
+            <h2 class="prais">Цена: {{tov[count.value][0][2]}}руб</h3>
+            <div class="footer">
+                <button class="add" onclick="dobav()">Добавить</button>
+                <button class="add" onclick="open1('post{{tov[count.value][0][0]}}', 'post2{{tov[count.value][0][0] * -1 - 1}}')">Подробнее</button>
+            </div>
+        </div>
+        <div class="scro" id = 'post{{tov[count.value][0][0]}}'>
+            <div class = 'pop-up' id = 'post2{{tov[count.value][0][0] * -1 - 1}}'>
+                <button class="clous" onclick="clous1('post{{tov[count.value][0][0]}}', 'post2{{tov[count.value][0][0] * -1 - 1}}')"><img src="..\static\cros.png" alt=""></button>
+                <div class="img_pop-up">
+                    <img src="..\static\img\{{tov[count.value][0][9]}}" height="100%" width="700" style="object-fit: cover; border-radius: 10px 10px 0px 0px;" alt="">
+                </div>
+                <h2>{{tov[count.value][0][1]}}</h2>
+                <h3>Цена: {{tov[count.value][0][2]}} руб</h3>
+                <h3>Белки: {{tov[count.value][0][3]}}</h3>
+                <h3>Жиры: {{tov[count.value][0][4]}}</h3>
+                <h3>Углеводы: {{tov[count.value][0][5]}}</h3>
+                <h3>Каллории: {{tov[count.value][0][5]}}</h3>
+                <p>
+                    Описание: {{tov[count.value][0][6]}}
+                </p>
+                <button class="add boton" onclick="dobav()">Добавить</button>
+            </div>
+        </div>
+        
+    {%endfor%}
+
+    </aside>
+    {%endfor%}
+
+    <div class="pop_up_2" id="pop">
+        <h3>чтобы добавить товар в корзину войдите в акаунт</h3>
+        <a href="/reg">Вход</a>
+        <button onclick="ubr()" class="add boton">Закрыть</button>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="..\static\index.js"></script>
+    
+</body>
+</html>

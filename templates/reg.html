@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='..\static\reg.css'>
+    <title>Document</title>
+</head>
+<body>    
+    <header>
+        <img class="logo" src="..\static\Logo.png">
+            <h2 class="fitfood">FitFood</h2>
+            <div class="menu">
+				<a href="\">Главная</a>
+				<a href="\menu">Меню</a>
+				<a href="\cor">Корзина</a>
+				<a href="\conta">Контакты</a>
+				<a href="\reg">Вход</a>
+            </div>
+    </header>    
+        <article>
+            <h2>Вход</h2>
+            <form id="form" class="forma" action="/reg" method="post">
+                <h3>Телефон</h3>
+                <input type="text" name="nic">
+                <h3>Пароль</h3>
+                <input type="password" name="pas">
+            </form>
+            <button onclick="submit()" class = 'vhod'>Вход</button>
+            <div class="boto">
+                <a href="#">Забыл пароль</a>
+                <a href="\reg_reg">Регистрация</a>
+            </div>     
+        </article>
+    <script src = "..\static\reg.js"></script>
+</body>
+</html>
+
